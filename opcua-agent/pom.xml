@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>c8y.agents</groupId>
-        <artifactId>c8y-agents</artifactId>
-        <version>9.14.0-SNAPSHOT</version>
+        <groupId>c8y.agents.opc</groupId>
+        <artifactId>c8y-agents-opc</artifactId>
+        <version>9.12.0</version>
     </parent>
 
     <artifactId>opcua-agent</artifactId>
@@ -156,7 +156,7 @@
 
             <!-- cumulocity  -->
             <dependency>
-                <groupId>c8y-agents</groupId>
+                <groupId>c8y-agents-opc</groupId>
                 <artifactId>opcua-agent-platform</artifactId>
                 <version>${project.version}</version>
             </dependency>

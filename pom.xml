@@ -3,14 +3,14 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>c8y.agents</groupId>
-	<artifactId>c8y-agents</artifactId>
-	<version>9.14.0-SNAPSHOT</version>
+	<groupId>c8y.agents.opc</groupId>
+	<artifactId>c8y-agents-opc</artifactId>
+	<version>9.12.0</version>
 	<name>Cumulocity :: Agents</name>
 	<packaging>pom</packaging>
 
 	<scm>
-		<connection>scm:hg:ssh://hg@bitbucket.org/m2m/cumulocity-agents</connection>
+		<connection>scm:hg:ssh://hg@bitbucket.org/m2m/cumulocity-agents-opc</connection>
 		<tag>HEAD</tag>
 	</scm>
 	<properties>
@@ -18,16 +18,17 @@
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
 
-		<c8y.dependencies.version>9.14.0-SNAPSHOT</c8y.dependencies.version>
-		<c8y.model.version>9.14.0-SNAPSHOT</c8y.model.version>
-		<c8y.microservice-new.version>9.14.0-SNAPSHOT</c8y.microservice-new.version>
-		<c8y.clients.version>9.14.0-SNAPSHOT</c8y.clients.version>
+		<c8y.dependencies.version>9.12.0</c8y.dependencies.version>
+		<c8y.model.version>9.12.0</c8y.model.version>
+		<c8y.microservice-new.version>9.12.0</c8y.microservice-new.version>
+		<c8y.clients.version>9.12.0</c8y.clients.version>
 
 		<!-- fixed versions of microservice sdk used for not migrated agents -->
-		<c8y.agent-framework.version>8.18.11</c8y.agent-framework.version>
-		<c8y.microservice.version>8.18.11</c8y.microservice.version>
+		<c8y.agent-framework.version>8.19.0</c8y.agent-framework.version>
+		<c8y.microservice.version>8.19.0</c8y.microservice.version>
 
 		<lombok.version>1.16.6</lombok.version>
+		<commons-httpclient.version>3.1</commons-httpclient.version>
 	</properties>
 
 	<profiles>
@@ -40,12 +41,6 @@
 				<module>opcua-agent</module>
 			</modules>
 		</profile>
-		<profile>
-			<id>apama</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-		</profile>
 	</profiles>
 
 	<dependencyManagement>
@@ -57,37 +52,11 @@
 			</dependency>
 			<!--Modules -->
 			<dependency>
-				<groupId>c8y.agents</groupId>
-				<artifactId>sms-gateway-client</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>c8y.agents</groupId>
-				<artifactId>sms-gateway-model</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
 				<groupId>com.nsn.cumulocity.clients-java</groupId>
 				<artifactId>microservice-agent</artifactId>
 				<version>${c8y.microservice.version}</version>
 			</dependency>
-			<dependency>
-				<groupId>c8y.agents</groupId>
-				<artifactId>helpdesk-agent-model</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>c8y.agents</groupId>
-				<artifactId>helpdesk-agent-client</artifactId>
-				<version>${project.version}</version>
-			</dependency>
 			<!--Dependencies -->
-			<dependency>
-				<groupId>com.nsn.cumulocity.model</groupId>
-				<artifactId>cep-model</artifactId>
-				<version>${c8y.model.version}</version>
-				<type>jar</type>
-			</dependency>
 			<dependency>
 				<groupId>com.nsn.cumulocity.clients-java</groupId>
 				<artifactId>agent-framework</artifactId>
@@ -105,11 +74,6 @@
 				<artifactId>commons-lang</artifactId>
 				<version>2.6</version>
 			</dependency>
-			<dependency>
-				<groupId>com.nsn.cumulocity.dependencies.osgi</groupId>
-				<artifactId>httpclient</artifactId>
-				<version>${commons-httpclient.version}-${c8y.dependencies.version}</version>
-		    </dependency>
 
 			<!-- utils -->
 			<dependency>
@@ -213,16 +177,5 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-
-	<distributionManagement>
-		<snapshotRepository>
-			<id>snapshot</id>
-			<url>${nexus.url}/nexus/content/repositories/snapshots/</url>
-		</snapshotRepository>
-		<repository>
-			<id>release</id>
-			<url>${nexus.url}/nexus/content/repositories/releases/</url>
-		</repository>
-	</distributionManagement>
 
 </project>
