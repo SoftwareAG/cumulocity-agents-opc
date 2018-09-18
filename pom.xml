@@ -26,7 +26,7 @@
 
         <!-- fixed versions of microservice sdk used for not migrated agents -->
         <c8y.agent-framework.version>8.19.0</c8y.agent-framework.version>
-        <c8y.microservice.version>8.18.0</c8y.microservice.version>
+        <c8y.microservice.version>8.18.3</c8y.microservice.version>
 
         <spring.boot.version>1.3.5.RELEASE</spring.boot.version>
         <lombok.version>1.16.6</lombok.version>
