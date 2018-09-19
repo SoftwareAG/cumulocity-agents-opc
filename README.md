@@ -37,21 +37,20 @@ Please add [Cumulocity] [1] [Maven repository] [2] to your `settings.xml` like t
 
 External Dependencies
 ---------------
-Initiate `Request Download` for version 2.2.4 from [Prosys OPC UA Java SDK] [4] (jar name should be similar to `Prosys-OPC-UA-Java-SDK-Client-Server-Binary-2.2.4-674.jar`).
+Download Prosys-OPC-UA-Java-SDK-Client-Server jar of version 2.2.4 from [Prosys OPC UA Java SDK] [4] (jar name should be similar to `Prosys-OPC-UA-Java-SDK-Client-Server-Binary-2.2.4-674.jar`).
 
-Download OPC-UA stack jar version 1.02.337 from [OPC Foundation UA-Java Releases] [5] (jar name should be similar to `Opc.Ua.Stack-1.02.337.10.jar`).
+Download OPC-UA stack jar of version 1.02.337 from [OPC Foundation UA-Java Releases] [5] (jar name should be similar to `Opc.Ua.Stack-1.02.337.10.jar`).
 
-Once you have both the jars, copy it to your `gateway` and `simulator` modules (folder path `./opcua-agent/gateway/src/main/resources/lib/` and `/opcua-agent/simulator/src/main/resources/lib/`).
+Copy two jars to resources folder of your `gateway` and `simulator` modules (folder path `./opcua-agent/gateway/src/main/resources/lib/` and `./opcua-agent/simulator/src/main/resources/lib/`).
 
 Add below given dependencies to your `gateway` and `simulator` `pom.xml` like this:
     
-    <!-- opc ua -->
     <dependency>
         <groupId>com.prosys.ua</groupId>
         <artifactId>Prosys-OPC-UA-Java-SDK-Client-Server-Evaluation</artifactId>
-        <version>2.2.4-674</version>
+        <version>--version--</version>
         <scope>system</scope>
-        <systemPath>${basedir}/src/main/resources/lib/Prosys-OPC-UA-Java-SDK-Client-Server-Binary-2.2.4-674.jar
+        <systemPath>${basedir}/src/main/resources/lib/Prosys-OPC-UA-Java-SDK-Client-Server-Binary-<version>.jar
         </systemPath>
     </dependency>
 
