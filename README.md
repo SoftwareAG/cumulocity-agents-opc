@@ -41,9 +41,11 @@ Download Prosys-OPC-UA-Java-SDK-Client-Server jar of version 2.2.4 from [Prosys 
 
 Download OPC-UA stack jar of version 1.02.337 from [OPC Foundation UA-Java Releases] [5] (jar name should be similar to `Opc.Ua.Stack-1.02.337.10.jar`).
 
-Copy two jars to resources folder of your `gateway` and `simulator` modules (folder path `./opcua-agent/gateway/src/main/resources/lib/` and `./opcua-agent/simulator/src/main/resources/lib/`).
+Create `lib` folder inside resources of your `gateway` and `simulator` modules (command `mkdir ./opcua-agent/gateway/src/main/resources/lib` and `mkdir ./opcua-agent/simulator/src/main/resources/lib`)
 
-Add below given dependencies to your `gateway` and `simulator` `pom.xml` like this:
+Copy two jars to `lib` folder of your `gateway` and `simulator` modules (folder path `./opcua-agent/gateway/src/main/resources/lib/` and `./opcua-agent/simulator/src/main/resources/lib/`).
+
+Add below given dependencies to your `gateway` and `simulator pom.xml` like this:
     
     <dependency>
         <groupId>com.prosys.ua</groupId>
