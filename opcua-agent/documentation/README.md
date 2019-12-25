@@ -107,9 +107,9 @@ For a rpm installation
 
 ### Register to Cumulocity
 
-To register the agent to Cumulocity, follow the [Device registration guide](/guides/users-guide/device-management/#device-registration) using an identifier configured in the properties file. 
+To register the agent to Cumulocity, follow the [Device registration guide](https://cumulocity.com/guides/users-guide/device-management/#connecting-devices) using an identifier configured in the properties file. 
 If the identifier is already used, use an unique one.
 
 ### Configure devices
 
-To configure the agent, follow [Cloud Fieldbus connect guide](/guides/users-guide/cloud-fieldbus/#connect).
+To configure the agent, follow [Cloud Fieldbus connect guide](https://cumulocity.com/guides/users-guide/optional-services/#cloud-fieldbus).
