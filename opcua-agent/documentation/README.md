@@ -1,3 +1,5 @@
+> **Important**: In this guide OPC UA 1.0 is discussed, but it is no longer supported. For the new version see [Cumulocity > OPC UA 2.0](https://www.cumulocity.com/guides/users-guide/optional-services/#opcua).
+
 # OPCUA Java gateway
 
 OPC-UA is the interoperability standard for the secure and reliable exchange of data in the industrial automation space and other industries. 
