@@ -1,4 +1,4 @@
-> **Important**: In this guide OPC UA 1.0 is discussed, but it is no longer supported. For the new version see [Cumulocity > OPC UA 2.0](https://www.cumulocity.com/guides/users-guide/optional-services/#opcua).
+> **Important**: The OPC UA version described in this document is deprecated. For the new version, see [OPC UA](https://www.cumulocity.com/guides/users-guide/optional-services/#opcua) on the Cumulocity documentation website.
 
 # OPCUA Java gateway
 
